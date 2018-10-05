@@ -38,10 +38,36 @@ Kada su željene datoteke dodane u _staging_ područje, moguće je snimiti sliku
 git commit -m "Initial commit. Added info.txt"
 git status
 ```
+
 Oznaka -m govori da će uz tu sliku biti naveden i opis koji slijedi iza nje. Ovo je jako korisno jer će olakšati kasnije baratanje slikama. Poruke uvijek trebaju biti smislene!
 
+Kada je slika snimljena, na nju se moguće vratiti bilo kada u kasnijem razvoju programa (postoji i još puno drugih mogućnosti). Da bi se vidjele sve slike moguće je koristiti naredbu
+
+```
+git log
+```
 
 
 ## Gitlab
 
+Iako je i kada se rabi lokalno riječ o alatu s brojnim mogućnostima, git omogućuje podizanje repozitorija na udaljene repozitorije. Gitlab je on-line servis koji omogućuje pohranu repozitorija online i lako upravljanje projektima, a bit će korišten za ove vježbe jer besplatno omogućuje privatne projekte.
+
+Kako bi se mogao koristiti, potrebno je najprije besplatno kreirati račun na [Gitlabu](www.gitlab.com). Zatim je potrebno omogućiti povezivanje sa serverom korištenjem SSH protokola prema [uputama](https://docs.gitlab.com/ee/gitlab-basics/create-your-ssh-keys.html). 
+
+U ovom trenutku, za probu, pokušajte repozitorij kreiran u prošlom koraku podići na Gitlab u prazan projekt koji ste ondje kreirali. Za pomoć se moguće koristiti [upute](https://docs.gitlab.com/ee/gitlab-basics/create-project.html).
+
 ## Korištenje projekta
+
+Za rješavanje zadaća napravite _fork_ ovog repozitorija [(ovaj koji trenutno gledate, kliknite ovdje na link ako ne znate što sad)](). Nakon _forkanja_, projekt bi trebao postojati i na Vašem Gitlab računu. Tada ga je moguće lokalno klonirati ili skinuti kao .zip ili .rar datoteku te započeti s radom. Kada želite spremiti stanje projekta, to radite narebom _commit_. Kada želite podići kod na svoj udaljeni repozitorij, to radite naredbom _push_. Da bi mogli napraviti push, morate dodati link do svog repozitorija (možete ga kopirati s gitlaba, sa stranice projekta) korištenjem naredbi
+
+```
+git remote add origin "LINK_KOJI_STE_KOPIRALI (git@gitlab.com:...)"
+git push -u origin --all
+```
+Nakon što unesete lozinku za SSH ključ, repozitorij će biti uploadan i na udaljenom repozitoriju bi trebale biti vidljive promjene.
+
+*NAPOMENE:*
+* Projekt koji kreirate na Gitlabu mora biti privatan. Javni projekti (repozitoriji) neće biti uvaženi
+* Na privatan projekt morate dodati @bruno.ferit (na gitlabu, pod settings, members, invite member), a razina prava mora biti minimalno reporter.
+* Link na repozitorij zalijepit ćete na odgovarajuće mjesto na loomen stranici kolegija.
+
