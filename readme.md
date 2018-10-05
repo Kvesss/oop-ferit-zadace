@@ -58,12 +58,17 @@ U ovom trenutku, za probu, pokušajte repozitorij kreiran u prošlom koraku podi
 
 ## Korištenje projekta
 
-Za rješavanje zadaća napravite _fork_ ovog repozitorija [(ovaj koji trenutno gledate, kliknite ovdje na link ako ne znate što sad)](). Nakon _forkanja_, projekt bi trebao postojati i na Vašem Gitlab računu. Tada ga je moguće lokalno klonirati ili skinuti kao .zip ili .rar datoteku te započeti s radom. Kada želite spremiti stanje projekta, to radite narebom _commit_. Kada želite podići kod na svoj udaljeni repozitorij, to radite naredbom _push_. Da bi mogli napraviti push, morate dodati link do svog repozitorija (možete ga kopirati s gitlaba, sa stranice projekta) korištenjem naredbi
+Za rješavanje zadaća napravite _fork_ ovog repozitorija [(ovaj koji trenutno gledate, kliknite ovdje na link ako ne znate što sad)](). Nakon _forkanja_, projekt bi trebao postojati i na Vašem Gitlab računu. Tada ga je moguće lokalno klonirati ili skinuti kao .zip ili .rar datoteku te započeti s radom. Kada želite spremiti stanje projekta, to radite narebom _commit_. Kada želite podići kod na svoj udaljeni repozitorij, to radite naredbom _push_. 
 
 ```
-git remote add origin "LINK_KOJI_STE_KOPIRALI (git@gitlab.com:...)"
 git push -u origin --all
 ```
+Za slučaj da origin ne postoji, morate dodati link do svog repozitorija (možete ga kopirati s gitlaba, sa stranice projekta) korištenjem naredbi
+```
+git remote add origin "LINK_KOJI_STE_KOPIRALI (git@gitlab.com:...)"
+```
+i nakon toga napraviti _push_.
+
 Nakon što unesete lozinku za SSH ključ, repozitorij će biti uploadan i na udaljenom repozitoriju bi trebale biti vidljive promjene.
 
 *NAPOMENE:*
