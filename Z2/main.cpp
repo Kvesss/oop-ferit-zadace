@@ -13,9 +13,10 @@ int main() {
 
 	std::ifstream input(filename);
 	Episode* episodes[count];
-	if (input.is_open() == false)
+	if (input.is_open() == false) {
 		std::cin.get();
 		return 1;
+	}
 
 	for (int i = 0; i < count; i++) {
 		episodes[i] = new Episode();
