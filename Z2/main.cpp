@@ -1,4 +1,6 @@
-#include "implement.cpp"
+#include "functions.h"
+
+
 
 int main() {
 	Description description(1, 45, "pilot");
