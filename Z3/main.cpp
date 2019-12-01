@@ -1,6 +1,3 @@
-#include <iostream>
-#include <string>
-#include <fstream>
 #include "functions.h"
 #include "Season.h"
 
@@ -42,4 +39,6 @@ int main() {
 
 	delete season;
 	delete seasonCopy;
+	std::cin.get();
+	return 0;
 }

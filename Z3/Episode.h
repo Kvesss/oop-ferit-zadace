@@ -11,12 +11,12 @@ private:
 	double viewSum;
 	double viewMax;
 	double averageScore;
-	Description opis;
-	friend std::ostream& operator<< (std::ostream& , Episode& );
-	friend std::ostream& operator<< (std::ostream&, Description&);
+	Description description;
+	friend std::ostream& operator<< (std::ostream& ,const Episode& );
 	friend std::istream& operator>> (std::istream& , Episode& );
 	friend void sort(Episode** ,const int );
 	friend bool operator<(const Episode&, const Episode&);
+	friend bool operator ==(const Episode& , const Episode& );
 public:
 	void addView(double);
 	double getMaxScore()const;
@@ -27,12 +27,20 @@ public:
 	void setViewerNumber(int);
 	void setViewSum(double);
 	void setViewMax(double);
-	void setOpis(Description);
+	void setDescription(Description);
 	void setAverageScore(double);
 	Episode();
 	Episode(int , double , double );
 	Episode(int , double , double , Description );
 	~Episode();
+	Episode& operator=(const Episode&);
 };
+
+std::ostream& operator<< (std::ostream&,const Episode&);
+std::istream& operator>> (std::istream&, Episode&);
+bool operator<(const Episode&, const Episode&);
+bool operator ==(const Episode&, const Episode&);
+void sort(Episode**, const int);
+
 
 #endif EPISODE_H
