@@ -5,8 +5,8 @@
 
 int main() {
 
-	IPrinter* printer = new ConsolePrinter();
-	//IPrinter* printer = new FilePrinter("name.txt");
+	//IPrinter* printer = new ConsolePrinter();
+	IPrinter* printer = new FilePrinter("name.txt");
 
 	std::string fileName("shows.tv");
 	std::vector<Episode> episodes = loadEpisodesFromFile(fileName);
