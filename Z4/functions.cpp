@@ -37,19 +37,21 @@ std::vector<Episode> loadEpisodesFromFile(std::string filename) {
 	//Episode** episodes = new Episode *[COUNT];
 
 	std::ifstream input(filename);
-	/*if (input.is_open() == false) {
+	if (input.is_open() == false) {
 		perror("File is closed!");
 		std::cin.get();
 		exit(0);
 	}
-	for (int i = 0; i < COUNT; i++) {
+	/*for (int i = 0; i < COUNT; i++) {
 		episodes[i] = new Episode();
 		input >> **(episodes + i);
 
 	}*/
-	std::vector<Episode> episodes(10);
-	for (int i = 0; input.peek() != EOF; i++)
+	std::vector<Episode> episodes;
+	for (int i = 0; input.peek() != EOF; i++) {
+		episodes.resize(i + 1);
 		input >> episodes[i];
+	}
 	input.close();
 	return episodes;
 }

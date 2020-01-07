@@ -7,7 +7,7 @@
 class EpisodeNotFoundException : public std::runtime_error {
 	std::string name;
 public:
-	EpisodeNotFoundException(std::string msg, std::string Name);
+	EpisodeNotFoundException(std::string , std::string );
 	std::string getName()const;
 
 };

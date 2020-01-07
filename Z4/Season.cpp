@@ -80,11 +80,11 @@ int Season::getMCount()const {
 
 void Season::add(Episode ep) {
 	episodes.push_back(ep);
-	mCount++;
+	mCount++;	
 }
 
 void Season::remove(std::string epName){
-	std::vector<int>::iterator i;
+	//std::vector<int>::iterator i;
 	int it=0;
 	for (auto i = episodes.begin(); i != episodes.end(); i++) {
 		if (episodes.at(it).getDescription().getName()==epName) {
@@ -98,8 +98,8 @@ void Season::remove(std::string epName){
 	}
 }
 
-Season::Season(std::vector<Episode> eps) :mCount(eps.size()) {
-	episodes = eps;
+Season::Season(std::vector<Episode> eps) :mCount(eps.size()),episodes(eps) {
+	
 }
 std::vector<Episode> Season::getEpisodes()const {
 	return episodes;
